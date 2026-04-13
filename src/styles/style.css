@@ -1,0 +1,596 @@
+/* Reset */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI", sans-serif;
+}
+
+html, body{
+width:100%;
+height:100%;
+margin:0;
+padding:0;
+}
+
+/* App Layout */
+
+.app{
+display:flex;
+width:100%;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:240px;
+height:100vh;
+background:#1e293b;
+color:white;
+padding:25px;
+position:fixed;
+left:0;
+top:0;
+}
+
+.logo{
+margin-bottom:30px;
+}
+
+.menu{
+list-style:none;
+}
+
+.menu li{
+padding:12px;
+margin-bottom:10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.menu li:hover{
+background:#334155;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+display:block;
+}
+
+/* Main Content */
+
+.main-content{
+margin-left:240px;
+width:calc(100% - 240px);
+}
+
+/* Dashboard */
+
+.dashboard{
+padding:30px;
+background:#f8fafc;
+min-height:100vh;
+width:100%;
+}
+
+.page-title{
+margin-bottom:20px;
+}
+
+/* Form Cards */
+
+.form-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+margin-bottom:20px;
+}
+
+.form-row{
+display:flex;
+gap:15px;
+margin-top:15px;
+}
+
+.form-row input,
+.form-row select{
+flex:1;
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+/* Buttons */
+
+.button-container{
+margin-top:10px;
+}
+
+.create-btn{
+background:#4f46e5;
+color:white;
+padding:14px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+width:180px;
+}
+
+.create-btn:hover{
+background:#4338ca;
+}
+
+.confirm-btn{
+margin-top:20px;
+background:#22c55e;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* AI Card */
+
+.ai-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+margin-top:20px;
+}
+
+.ai-row{
+display:flex;
+gap:20px;
+margin-top:15px;
+}
+
+.ai-box{
+flex:1;
+background:#f1f5f9;
+padding:20px;
+border-radius:10px;
+}
+
+/* Track Case */
+
+.track-card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+}
+
+.step{
+text-align:center;
+flex:1;
+}
+
+.circle{
+width:40px;
+height:40px;
+border-radius:50%;
+border:2px solid #ccc;
+margin:auto;
+margin-bottom:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.completed .circle{
+background:#22c55e;
+color:white;
+border:none;
+}
+
+/* Tables */
+
+.table-card{
+background:white;
+padding:25px;
+border-radius:14px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+width:100%;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+text-align:left;
+padding:15px;
+font-weight:600;
+}
+
+td{
+padding:15px;
+border-top:1px solid #eee;
+}
+
+/* Buttons */
+
+.accept{
+background:#22c55e;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:8px;
+cursor:pointer;
+margin-right:8px;
+}
+
+.hold{
+background:#f59e0b;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:8px;
+cursor:pointer;
+margin-right:8px;
+}
+
+.reject{
+background:#ef4444;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* Lab Dashboard */
+
+.lab-card{
+background:white;
+border-radius:16px;
+padding:25px;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
+margin-top:20px;
+}
+
+.lab-header{
+margin-bottom:15px;
+}
+
+.lab-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.lab-table th{
+text-align:left;
+padding:15px;
+font-weight:600;
+color:#555;
+border-bottom:1px solid #eee;
+}
+
+.lab-table td{
+padding:15px;
+border-bottom:1px solid #f1f1f1;
+}
+
+/* Status */
+
+.status{
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+font-weight:600;
+}
+
+.pending{
+background:#fff7ed;
+color:#f59e0b;
+}
+
+/* Popup */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.popup-box{
+background:white;
+padding:30px;
+border-radius:12px;
+width:300px;
+}
+
+.popup-box input{
+width:100%;
+padding:10px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.popup-box button{
+margin-top:15px;
+background:#4f46e5;
+color:white;
+padding:10px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+.dashboard-cards{
+display:flex;
+gap:20px;
+margin-bottom:20px;
+}
+
+.dash-card{
+background:white;
+padding:20px;
+border-radius:12px;
+flex:1;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+.dash-card h3{
+font-size:24px;
+margin-bottom:5px;
+}
+.chat-card{
+background:white;
+padding:20px;
+border-radius:12px;
+height:500px;
+display:flex;
+flex-direction:column;
+}
+
+.chat-box{
+flex:1;
+overflow-y:auto;
+margin-bottom:10px;
+}
+
+.doctor-msg{
+background:#4f46e5;
+color:white;
+padding:10px;
+border-radius:10px;
+margin-bottom:10px;
+width:fit-content;
+}
+
+.lab-msg{
+background:#e5e7eb;
+padding:10px;
+border-radius:10px;
+margin-bottom:10px;
+width:fit-content;
+}
+
+.chat-input{
+display:flex;
+gap:10px;
+}
+
+.chat-input input{
+flex:1;
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+.chat-input button{
+background:#4f46e5;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
+}
+.notification{
+background:#f1f5f9;
+padding:15px;
+margin-bottom:10px;
+border-radius:8px;
+}
+.badge{
+background:red;
+color:white;
+padding:2px 8px;
+border-radius:50%;
+margin-left:8px;
+font-size:12px;
+}
+.status{
+padding:6px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+}
+
+.pending{
+background:#fff7ed;
+color:#f59e0b;
+}
+
+.in-process{
+background:#eff6ff;
+color:#3b82f6;
+}
+
+.completed{
+background:#ecfdf5;
+color:#22c55e;
+}
+
+.rejected{
+background:#fef2f2;
+color:#ef4444;
+}
+
+.on-hold{
+background:#fff7ed;
+color:#f97316;
+}
+.filter-bar{
+display:flex;
+justify-content:space-between;
+margin-bottom:15px;
+}
+
+.search-box{
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+width:300px;
+}
+
+.filter-dropdown{
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+width:150px;
+}
+.login-container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#f8fafc;
+}
+
+.login-card{
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+width:300px;
+text-align:center;
+}
+
+.login-card select,
+.login-card button{
+width:100%;
+padding:12px;
+margin-top:15px;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+.login-card button{
+background:#4f46e5;
+color:white;
+border:none;
+cursor:pointer;
+}
+.logout-btn{
+margin-top:20px;
+padding:12px;
+width:100%;
+background:#ef4444;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+.login-content{
+width:100%;
+margin-left:0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+.view-btn{
+background:#4f46e5;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+.file-buttons{
+margin-bottom:15px;
+}
+
+.download-btn{
+background:#22c55e;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:8px;
+cursor:pointer;
+margin-left:10px;
+}
+.timeline{
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+}
+
+.timeline-step{
+text-align:center;
+flex:1;
+position:relative;
+}
+
+.circle{
+width:30px;
+height:30px;
+border-radius:50%;
+background:#ddd;
+margin:0 auto 10px;
+}
+
+.timeline-step.active .circle{
+background:#4f46e5;
+}
+
+.timeline-step p{
+font-size:14px;
+}
+.edit-btn{
+background:#f59e0b;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+.form-row{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.form-row input{
+flex:1;
+}
+
+.form-row button{
+white-space:nowrap;
+}
+.delete-btn{
+background:#ef4444;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:8px;
+cursor:pointer;
+}
